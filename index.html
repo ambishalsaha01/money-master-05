@@ -13,7 +13,7 @@
 <body>
     <!-- Header section start -->
     <header>
-        <h2 class="section-title">Safe Money</h2>
+        <h1 class="section-title">Safe Money</h1>
     </header>
 
     <!-- Main section start -->
@@ -24,7 +24,25 @@
                     <img src="img/money-safe.jpg" alt="money safe image">
                 </div>
                 <div class="money-master-form">
-                    <h2>safe money</h2>
+                    <div class="income">
+                        <h2>My Income</h2>
+                        <p>Income <input id="my-income" type="text" placeholder="Please enter your icome amount"></p>
+                    </div>
+                    <div class="expenses">
+                        <p>Food: <input type="text"></p>
+                        <p>rent: <input type="text"></p>
+                        <p>cloth: <input type="text"></p>
+                        <button id="calculate-btn">Calculate</button>
+                    </div>
+                    <div class="expenses-result">
+                        <p>Total Expenses: <span id="total-expenses">00</span></p>
+                        <p>Balance: <span id="total-balance">00</span></p>
+                    </div>
+                    <div class="save-balance">
+                        <p>Save: <input type="text"> <span>%</span> <button id="save-btn">save</button></p>
+                        <p>Saving Amount: <span id="saving-amount">00</span></p>
+                        <p>Remaing Balance: <span id="remaing-balance">00</span></p>
+                    </div>
                 </div>
             </div>
         </section>
