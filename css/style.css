@@ -1,37 +1,98 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+/* ===========================Google Font========================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Common CSS Style Start */
+/* ===========================
+Common CSS Style Start
+=========================== */
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    background-color: #dff9fb;
+    background-color: #ffffff;
+}
+
+input:focus,
+button:focus{
+    outline: 0;
 }
 
 .section-title{
-    font-size: 32px;
-    font-weight: 900;
+    font-size: 48px;
+    color: #273c75;
+    font-weight: 700;
     text-align: center;
+}
+
+h2{
+    font-size: 28px;
+    color: #2f3542;
 }
 
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
-/* Common CSS Style End */
+/* ===========================
+Common CSS Style End
+=========================== */
 
-/* Money-master section start */
+/* ===========================
+Money-master section start
+=========================== */
 .money-master{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-column-gap: 25px;
     grid-row-gap: 20px;
+    text-align: center;
 }
 
 .money-master .money-master-img img{
     width: 100%;
+    height: 80vh;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 30px;
 }
-/* Money-master section end */
+
+.money-master .money-master-form{
+    background-color: #f1f2f6;
+    padding: 25px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(54, 54, 54, 0.747);
+}
+
+.money-master p{
+    color: #2f3542;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.money-master input,
+.money-master button{
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 15px;
+    margin-left: 20px;
+    box-shadow: 0 0 5px #c3c4c7;
+}
+
+.money-master button{
+    background-color: #273c75;
+    padding: 10px 35px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.money-master button:hover{
+    cursor: pointer;
+}
+
+#safe-box{
+    width: 100px;
+}
+/* ===========================
+Money-master section end
+=========================== */
