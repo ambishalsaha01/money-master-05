@@ -1,11 +1,12 @@
-// **********get income balance**********
-function getIncomeBalance(){
-    const incomeField = document.getElementById('my-income');
+// //////////Get Income Balance\\\\\\\\\\
+function getIncomeBalance(incomeAmount){
+    const incomeField = document.getElementById(incomeAmount);
     const incomeFieldValue = incomeField.value;
     const parseIncome = parseFloat(incomeFieldValue);
     return parseIncome;
 }
-// **********get cost field**********
+
+// //////////Get Cost Field\\\\\\\\\\
 function getTotalcost(costField){
     const costInputField = document.getElementById(costField);
     const costInputFieldValue = costInputField.value;
@@ -13,7 +14,7 @@ function getTotalcost(costField){
     return parseCostField;
 }
 
-// **********get expenses field**********
+// //////////Get Expenses & Balance Field\\\\\\\\\\
 function getExpensexBalance(balancdeField, amount){
     const expensesBalance = document.getElementById(balancdeField);
     const expensesBalanceInner = expensesBalance.innerText;
@@ -21,27 +22,33 @@ function getExpensexBalance(balancdeField, amount){
     expensesBalance.innerText = parseExpensesBalance + amount;
 }
 
-// **********handle calculate btn**********
+// //////////Handle Calculate btn\\\\\\\\\\
 document.getElementById('calculate-btn').addEventListener('click', function(){
-    // get income
-    const totalIncome = getIncomeBalance(); 
-    // if(totalIncome > 0){
-    //     console.log('thik ase')
-    // }
-    // else{
-    //     console.log('thik nai')
-    // }
+    // Update Income Field
+    const totalIncome = getIncomeBalance('my-income'); 
+    if(totalIncome > 0){
+        document.getElementById('income-error').style.display = 'none'
+    }
+    else {
+        document.getElementById('income-error').style.display = 'block';
+    }
 
-    // get cost field
+    // Update Cost Field
     const foodCost = getTotalcost('food-cost');
     const rentCost = getTotalcost('rent-cost');
     const clothCost = getTotalcost('cloth-cost');
     const totalCost = foodCost + rentCost + clothCost;
 
-    // update expens balance
-    getExpensexBalance('total-expenses', totalCost);
+    // Update Expenses & Balance Field
+    if(totalIncome > totalCost){
+        getExpensexBalance('total-expenses', totalCost);
+        document.getElementById('expenses-error').style.display = 'none';
+    }
+    else {
+        document.getElementById('expenses-error').style.display = 'block';
+    }
 
-    // update total-balance
+    // Update Total Balance Field
     const finalBalance = totalIncome - totalCost;
     getExpensexBalance('total-balance', finalBalance);
-})
+});

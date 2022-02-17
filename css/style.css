@@ -1,4 +1,6 @@
-/* ===========================Google Font========================== */
+/* ===========================
+Google Font
+========================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* ===========================
@@ -35,6 +37,7 @@ h2{
 /* ===========================
 Common CSS Style End
 =========================== */
+
 
 /* ===========================
 Money-master section start
@@ -92,6 +95,13 @@ Money-master section start
 
 #safe-box{
     width: 100px;
+}
+
+#income-error,
+#expenses-error{
+    display: none;
+    font-size: 14px;
+    color: #ff5e00;
 }
 /* ===========================
 Money-master section end

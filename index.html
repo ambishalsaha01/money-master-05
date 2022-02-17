@@ -27,6 +27,7 @@
                     <div class="income">
                         <h2>My Income</h2>
                         <p>Income: <input id="my-income" type="text" placeholder="Enter your Money"></p>
+                        <p id="income-error">Enter a positive number</p>
                     </div>
                     <div class="expenses">
                         <p>Food: <input id="food-cost" type="text"></p>
@@ -36,10 +37,11 @@
                     </div>
                     <div class="expenses-result">
                         <p>Total Expenses: <span id="total-expenses">00</span></p>
+                        <p id="expenses-error">Please gives a valuable amount</p>
                         <p>Balance: <span id="total-balance">00</span></p>
                     </div>
                     <div class="save-balance">
-                        <p>Save: <input id="safe-box" type="text"> <span>%</span> <button id="save-btn">save</button></p>
+                        <p>Save: <input id="safe-box" type="text"><span>%</span> <button id="save-btn">save</button></p>
                         <p>Saving Amount: <span id="saving-amount">00</span></p>
                         <p>Remaing Balance: <span id="remaing-balance">00</span></p>
                     </div>
