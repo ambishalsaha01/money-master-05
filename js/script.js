@@ -11,7 +11,13 @@ function getTotalcost(costField){
     const costInputField = document.getElementById(costField);
     const costInputFieldValue = costInputField.value;
     const parseCostField = parseFloat(costInputFieldValue);
-    return parseCostField;
+    if(parseCostField > 0){
+        return parseCostField;
+    }
+    else{
+        costInputField.value = ''
+    }
+    
 }
 
 // //////////Get Expenses & Balance Field\\\\\\\\\\
