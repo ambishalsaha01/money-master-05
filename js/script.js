@@ -15,7 +15,7 @@ function getTotalcost(costField){
         return parseCostField;
     }
     else{
-        costInputField.value = ''
+        return '';
     }
     
 }
